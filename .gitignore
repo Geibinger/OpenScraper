@@ -1,0 +1,8 @@
+# .json account files
+.json
+
+# generated excel files
+generatedFiles/
+
+# executeable
+RedditToExcelScraper/

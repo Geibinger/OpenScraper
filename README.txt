@@ -1,4 +1,4 @@
-RedditToExcelScraper
+OpenScraper
 Copyright Friedl Jakob 2021
 ----------------------------------------------------------------------------------
 
@@ -28,3 +28,8 @@ After creating the app, the client_id can be found beneath the application name
 in the top left corner. The other fields should be self explanatory.
 
 The information of the Reddit app is needed to connect to the Reddit API in the RedditToExcelScraper program.
+
+TODO:
+
+-implement SQLight (for hashed Data Storage)
+-add YouTube functionality

@@ -1,6 +1,7 @@
 import tweepy
 import openpyxl
-import datetime
+
+# BASIC Twitter API subscription needed
 
 # Create a Twitter API client object
 consumer_key = '[YOUR CONSUMER KEY]'

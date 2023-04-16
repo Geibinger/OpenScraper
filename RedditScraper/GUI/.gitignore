@@ -6,3 +6,7 @@ generatedFiles/
 
 # executeable
 RedditToExcelScraper/
+dist/
+
+# others
+.spec

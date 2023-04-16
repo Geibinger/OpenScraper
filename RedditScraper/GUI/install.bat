@@ -1,7 +1,4 @@
-pip install easygui
-pip install praw
-pip install openpyxl
-pip install datetime
+pip3 install easygui praw openpyxl pyinstaller
 
 pyinstaller --onefile -w RedditToExcelScraper.py
 mkdir RedditToExcelScraper

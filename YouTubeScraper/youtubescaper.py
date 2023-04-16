@@ -31,7 +31,7 @@ while True:
         for item in response['items']:
             comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
             author = item['snippet']['topLevelComment']['snippet']['authorDisplayName']
-            created = datetime.strptime(item['snippet']['topLevelComment']['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%S.%fZ').strftime('%d/%m/%Y %H:%M:%S')
+            created = datetime.strptime(item['snippet']['topLevelComment']['snippet']['publishedAt'], '%Y-%m-%dT%H:%M:%SZ').strftime('%d/%m/%Y %H:%M:%S')
             likes = item['snippet']['topLevelComment']['snippet']['likeCount']
 
             # Add the comment data to the comments list

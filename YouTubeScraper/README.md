@@ -4,7 +4,9 @@ This Python program allows you to scrape comments from a YouTube video using the
 ## Setup
 1) To use this program, you need to have a Google account and enable the YouTube Data API v3 for your project. If you haven't enabled the API already, go to the [Google API Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com) and enable the API.
 
-2) Once you've enabled the API, create a new API key from the "Credentials" section of your Google API Console. This will give you access to the API key needed for authentication.
+2) Once you've enabled the API, create a new API key from the "Credentials" section of your Google API Console. This will give you access to the API key needed for authentication. The image below shows where to create the credentials.
+
+![YouTube API Keys](API.png)
 
 3) Replace the `[YOUR API KEY]` placeholder with the API key you obtained in the previous step.
 

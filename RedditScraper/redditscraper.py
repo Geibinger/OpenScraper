@@ -3,7 +3,11 @@ import openpyxl
 import datetime
 
 # Create a Reddit API client object
-reddit = praw.Reddit(client_id='[YOUR CLIENT ID]', client_secret='[YOUR CLIENT SECRET]', user_agent = '[YOUR USER AGENT NAME]', username = '[YOUR USERNAME]', password = '[YOUR PASSWORD]')
+reddit = praw.Reddit(client_id='[YOUR CLIENT ID]',
+                     client_secret='[YOUR CLIENT SECRET]',
+                     user_agent = '[YOUR USER AGENT NAME]',
+                     username = '[YOUR USERNAME]',
+                     password = '[YOUR PASSWORD]')
 
 # Get a subreddit object
 subreddit = reddit.subreddit('learnprogramming')

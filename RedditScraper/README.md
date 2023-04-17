@@ -51,3 +51,25 @@ posts = subreddit.hot(limit=2)
 python redditscraper.py
 ```
 4) The script will create an Excel file in the same directory as the script with the scraped data.
+
+## Explanation
+
+This Python script performs the following tasks:
+
+1) Imports the necessary modules: praw (Python Reddit API Wrapper) for accessing the Reddit API, openpyxl for creating and manipulating Excel workbooks, and datetime for formatting date and time information.
+2) Creates a Reddit API client object by providing the client ID, client secret, user agent name, username, and password. This client object allows the code to interact with the Reddit API.
+3) Gets a subreddit object for the subreddit 'learnprogramming'.
+4) Gets a list of posts from the subreddit using the 'hot' method and a limit of 2 posts.
+5) Creates a new Excel workbook using openpyxl.
+6) Defines a function 'process_comments' that recursively iterates through the comments of a post and extracts the desired information about each comment (body, author, creation time, score, and parent comment). For each comment, it creates a list of values and adds them as a new row to the comments worksheet of the current post's worksheet.
+7) Iterates through the list of posts and for each post, creates a new worksheet for the post data and another worksheet for the comments of the post. It extracts the desired information about the post (title, body, author, creation time, score, number of comments, and permalink) and adds them as a new row to the post data worksheet. It then adds column headings to the comments worksheet and starts the recursive processing of the comments from the top-level comments of the post using the 'process_comments' function.
+8) Saves the Excel file using the post ID as the filename.
+
+For more information, visit [my blog post](https://jakobfriedl.tech/extracting-reddit-post-comment-data-praw-openpyxl/).
+
+## Notes
+
+- The Reddit API client object is created using the client ID, client secret, user agent name, username, and password. These credentials can be obtained by creating a Reddit app at https://www.reddit.com/prefs/apps.
+- The 'hot' method is used to get a list of posts from the subreddit. Other methods such as 'new', 'top', 'rising', and 'controversial' can also be used.
+- The 'process_comments' function uses recursion to iterate through the comments of a post. It checks if a comment has a parent comment and adds the parent comment's body as an additional value to the list of values for the comment.
+- The 'worksheet' variable is used to refer to the current worksheet being worked on. It is created for each post and comments worksheet and is used to append new rows of data to the worksheet using the 'append' method.

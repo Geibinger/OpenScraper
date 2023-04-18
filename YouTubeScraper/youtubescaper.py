@@ -40,6 +40,7 @@ while True:
         # Check if there are more comments to retrieve
         if 'nextPageToken' in response:
             next_page_token = response['nextPageToken']
+            print(f"Retrieving comments for page: {next_page_token}")
         else:
             break
 

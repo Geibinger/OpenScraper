@@ -1,4 +1,5 @@
 import openpyxl
+import re
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from datetime import datetime
@@ -6,8 +7,11 @@ from datetime import datetime
 # API key
 API_KEY = '[YOUR API KEY]'
 
-# Video ID
-VIDEO_ID = '[YOUR VIDEO ID]'
+# Get the video link from user
+VIDEO_URL = '[URL TO THE VIDEO]'
+
+# Extract video ID from the link
+VIDEO_ID = re.findall(r'(?<=v=)[^&]+', VIDEO_URL)[0]
 
 # Create a YouTube API client object
 youtube = build('youtube', 'v3', developerKey=API_KEY)

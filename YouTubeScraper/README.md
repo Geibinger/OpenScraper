@@ -18,14 +18,14 @@ This Python program allows you to scrape comments from a YouTube video using the
 pip3 install openpyxl google-api-python-client
 ```
 ## Usage
-1) Open the `youtube_comments_scraper.py` file in your Python editor of choice.
+1) Open the `youtubescraper.py` file in your Python editor of choice.
 
 2) Modify the `VIDEO_ID` variable to specify the video ID of the YouTube video you want to scrape comments from.
 
 3) Run the program.
 
 ```sh
-python youtube_comments_scraper.py
+python youtubescraper.py
 ```
 4) The program will save the scraped comments to an Excel file named `[VIDEO_ID].xlsx` in the same directory as the `youtube_comments_scraper.py` file.
 

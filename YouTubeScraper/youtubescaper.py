@@ -1,14 +1,19 @@
 import openpyxl
 import re
+import json
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from datetime import datetime
 
+# Load credentials file
+with open('YouTubeScraper/api-credentials.json') as f:
+    keyfile = json.load(f)
+
 # API key
-API_KEY = '[YOUR API KEY]'
+API_KEY = keyfile['API-Key']
 
 # Get the video link from user
-VIDEO_URL = '[URL TO THE VIDEO]'
+VIDEO_URL = 'https://www.youtube.com/watch?v=Q2OjWrSSvYU&ab_channel=Electronoobs'
 
 # Extract video ID from the link
 VIDEO_ID = re.findall(r'(?<=v=)[^&]+', VIDEO_URL)[0]
